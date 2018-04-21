@@ -1,0 +1,24 @@
+#navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #397c38;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+#nav_elements {
+  color: white;
+  height: 100%;
+  display: flex;
+  // background: #ccc;
+
+  align-items: center;
+  flex-flow: row nowrap;
+}
+#nav_elements div {
+  padding: 15px;
+}
