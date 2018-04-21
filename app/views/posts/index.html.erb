@@ -20,8 +20,8 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
-        <td><%= post.user %></td>
-        <td><%= post.forum %></td>
+        <td><%= post.user.name %></td>
+        <td><%= post.forum.topic %></td>
         <td><%= post.votes_plus %></td>
         <td><%= post.votes_minus %></td>
         <td><%= link_to 'Show', post %></td>
