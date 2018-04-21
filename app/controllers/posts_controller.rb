@@ -13,8 +13,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comments = @post.comments
   end
-  # GET /posts/new
+  # GET /posts/new/:id
   def new
+    @forum = Forum.find(params[:forum_id])
     @post = Post.new(user_id: current_user.id)
   end
 

@@ -11,7 +11,7 @@ class ForumsController < ApplicationController
   # GET /forums/1.json
   def show
     @forum = Forum.find(params[:id])
-    @posts = @forum.posts
+    @posts = Post.all
   end
 
   # GET /forums/new
