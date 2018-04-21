@@ -9,6 +9,54 @@
   </head>
 
   <body>
+    <header>
+      <ul>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          </li>
+          <li>
+            <%= current_user.email %>
+          </li>
+
+          <li>
+            <%= current_user.name %>
+          </li>
+          
+          <li>
+            <%= link_to "Edit Account", edit_user_registration_path%>
+          </li>
+          <!-- <li>
+            <%= link_to "Buscar Foro", forums_path%>
+          </li>
+          <li>
+            <%= link_to "Crear Foro", new_forum_path%>
+          </li>
+          <li>
+            <%= link_to "Buscar publicacion", posts_path%>
+          </li>
+          <li>
+            <%= link_to "Crear publicacion", new_post_path%>
+          </li> -->
+
+
+        <% else %>
+          <li>
+            <%= link_to "Sign In", new_user_session_path  %>
+          </li>
+          <li>
+            <%= link_to "Sign Up", new_user_registration_path  %>
+          </li>
+          <!-- <li>
+            <%= link_to "Buscar Foro", forums_path%>
+          </li>
+          <li>
+            <%= link_to "Buscar publicacion", posts_path%>
+          </li> -->
+        <% end %>
+
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>

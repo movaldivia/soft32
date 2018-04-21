@@ -24,11 +24,12 @@
   </div>
 
   <div class="field">
+    <%= form.label :Up_vote %>
     <%= form.check_box :votes_plus %>
   </div>
 
   <div class="field">
-    <%= form.label :votes_minus %>
+    <%= form.label :Down_vote %>
     <%= form.number_field :votes_minus, id: :comment_votes_minus %>
   </div>
 
