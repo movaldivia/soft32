@@ -1,13 +1,16 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
+<h3>
   <strong>Topic:</strong>
   <%= @forum.topic %>
-</p>
+</h3>
 
 <%= link_to 'Edit', edit_forum_path(@forum) %> |
 <%= link_to 'Back', forums_path %>
+    <h1> POSTS </h1>
     <% @posts.each do |msg| %>
+      <% if msg.id == @forum.id %>
       <li><%= msg.body %></li>
+      <%end%>
     <% end %>
